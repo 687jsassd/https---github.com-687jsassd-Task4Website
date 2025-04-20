@@ -118,7 +118,10 @@
     
         <!-- 背景图样式 -->
         <style>
-            /* 英雄区域logo悬停效果 */
+            /* logo悬停效果 */
+            .hero-logo {
+                transition: transform 0.7s ease;  /* 添加过渡动画 */
+            }
             .hero-logo:hover {
                 transform: scale(1.25);  /* 悬停时放大 */
             }
@@ -444,26 +447,28 @@
 
         <!-- 背景图 -->
         <div class="hero-section" style="
-            position: relative;  /* 相对定位 */
-            height: 124vh;  /* 高度为视口高度的124% */
-            background-image: url('./images/background_Homepage.png');  /* 背景图片路径 */
-            background-size: contain;  /* 背景图片自适应 */
-            background-position: center top;  /* 背景图片定位在顶部居中 */
-            background-repeat: no-repeat;  /* 背景不重复 */
-            margin: 0;  /* 外边距为0 */
+            position: relative;
+            height: 100vh;
+            background-image: url('./images/background_Homepage.png');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            margin: 0;
         ">
             <!-- 内容容器 -->
             <div style="
-                position: absolute;  /* 绝对定位 */
-                top: 15%;  /* 距离顶部15% */
-                left: 50%;  /* 距离左侧50% */
-                transform: translateX(-50%);  /* 水平居中 */
-                text-align: center;  /* 文本居中 */
+                position: absolute;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                width: 90%;
+                max-width: 500px;
             ">
                 <!-- 网站Logo -->
                 <img src="./images/decoration_Geek.png" alt="Logo" class="hero-logo" style="
-                    width: 380px;  /* 固定宽度 */
-                    transition: transform 0.7s ease;  /* 缩放过渡效果 */
+                    width: 100%;
+                    max-width: 380px;
                 ">
             </div>
         </div>
